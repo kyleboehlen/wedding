@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shannon &amp; Kyle — Wedding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --ivory: #FAF8F5;
+            --warm-white: #F5F0EB;
+            --taupe: #B8A99A;
+            --dark-taupe: #8C7B6B;
+            --charcoal: #3A3A3A;
+            --soft-gold: #C9B98A;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+            background-color: #E8E2DA;
+            color: var(--charcoal);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .phone-frame {
+            width: 100%;
+            max-width: 430px;
+            min-height: 100vh;
+            background-color: var(--ivory);
+            box-shadow: 0 0 60px rgba(0, 0, 0, 0.08);
+        }
+
+        .hero-image {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .content {
+            padding: 2rem 1.5rem 3rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .names {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: 2.8rem;
+            letter-spacing: 0.04em;
+            color: var(--charcoal);
+            margin-bottom: 0.25rem;
+        }
+
+        .ampersand {
+            font-style: italic;
+            color: var(--soft-gold);
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.25rem 0;
+        }
+
+        .divider-line {
+            width: 50px;
+            height: 1px;
+            background-color: var(--taupe);
+        }
+
+        .divider-diamond {
+            width: 6px;
+            height: 6px;
+            background-color: var(--soft-gold);
+            transform: rotate(45deg);
+        }
+
+        .wedding-date {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 0.95rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--dark-taupe);
+        }
+
+        .venue {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--dark-taupe);
+            margin-top: 0.4rem;
+        }
+
+        .schedule-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: 1.6rem;
+            text-align: center;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--charcoal);
+            margin-bottom: 2rem;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            bottom: 0.5rem;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, var(--taupe) 10%, var(--taupe) 90%, transparent);
+        }
+
+        .event {
+            position: relative;
+            padding-bottom: 2rem;
+        }
+
+        .event:last-child {
+            padding-bottom: 0;
+        }
+
+        .event::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 7px;
+            height: 7px;
+            background-color: var(--soft-gold);
+            border-radius: 50%;
+            transform: translateX(-3px);
+        }
+
+        .event-time {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--soft-gold);
+            margin-bottom: 0.2rem;
+        }
+
+        .event-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            font-size: 1.35rem;
+            color: var(--charcoal);
+            margin-bottom: 0.15rem;
+        }
+
+        .event-detail {
+            font-size: 0.85rem;
+            color: var(--dark-taupe);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer-divider {
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--dark-taupe);
+        }
+
+        .gifts {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background-color: var(--warm-white);
+            border-radius: 4px;
+        }
+
+        .gifts-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: 1.4rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--charcoal);
+            margin-bottom: 0.75rem;
+        }
+
+        .gifts-text {
+            font-size: 0.85rem;
+            color: var(--dark-taupe);
+            line-height: 1.7;
+        }
+
+        .gifts-link {
+            display: inline-block;
+            margin-top: 0.75rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--soft-gold);
+            text-decoration: none;
+            border-bottom: 1px solid var(--soft-gold);
+            padding-bottom: 2px;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .gifts-link:hover {
+            color: var(--dark-taupe);
+            border-color: var(--dark-taupe);
+        }
+
+        @media (max-width: 430px) {
+            .phone-frame {
+                box-shadow: none;
+            }
+
+            body {
+                background-color: var(--ivory);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="hero-image">
+            <img src="2-LMT00027.jpg" alt="Shannon and Kyle">
+        </div>
+
+        <div class="content">
+            <header>
+                <h1 class="names">Shannon <span class="ampersand">&amp;</span> Kyle</h1>
+                <div class="divider">
+                    <span class="divider-line"></span>
+                    <span class="divider-diamond"></span>
+                    <span class="divider-line"></span>
+                </div>
+                <p class="wedding-date">August 3, 2026</p>
+                <p class="venue">Alpine Art Center</p>
+                <p class="venue">450 South Alpine Hwy #100, Alpine, UT 84004</p>
+            </header>
+
+            <h2 class="schedule-heading">Schedule of Events</h2>
+
+            <div class="timeline">
+                <div class="event">
+                    <p class="event-time">5:00 PM</p>
+                    <h3 class="event-name">Photos</h3>
+                    <p class="event-detail">Strike a pose with the happy couple</p>
+                </div>
+
+                <div class="event">
+                    <p class="event-time">6:30 PM</p>
+                    <h3 class="event-name">Outside Ceremony</h3>
+                    <p class="event-detail">Please be seated by 6:15 PM</p>
+                </div>
+
+                <div class="event">
+                    <p class="event-time">7:00 PM</p>
+                    <h3 class="event-name">Dinner &amp; Reception</h3>
+                    <p class="event-detail">Food, drinks, and celebration</p>
+                </div>
+
+                <div class="event">
+                    <p class="event-time">10:00 PM</p>
+                    <h3 class="event-name">Last Call</h3>
+                    <p class="event-detail">You don't have to go home, but you can't stay here</p>
+                </div>
+            </div>
+
+            <div class="gifts">
+                <h3 class="gifts-heading">A Note on Gifts</h3>
+                <p class="gifts-text">Your presence is our present. I know I know, I groaned writing it too. ate with us is more than enough. If you insist on giving, we'd love for you to make a donation in our name.</p>
+                <a href="https://saveourcanyons.org/donate-soc" class="gifts-link">Save Our Canyons</a>
+            </div>
+
+            <footer>
+                <div class="divider footer-divider">
+                    <span class="divider-line"></span>
+                    <span class="divider-diamond"></span>
+                    <span class="divider-line"></span>
+                </div>
+                <p class="footer-text">We can't wait to celebrate with you</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
