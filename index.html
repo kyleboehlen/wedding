@@ -539,6 +539,10 @@
                             </label>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label class="form-label" for="rsvp-dietary">Dietary Restrictions / Allergies</label>
+                        <input class="form-input" type="text" id="rsvp-dietary" name="dietary" placeholder="I have a dietary restriction/allergy (please specify)">
+                    </div>
                     <button type="submit" class="form-submit" id="rsvp-submit">Send RSVP</button>
                 </form>
             </div>
@@ -561,6 +565,7 @@
         const guests = document.getElementById('rsvp-guests').value;
         const food = document.querySelector('input[name="food"]:checked').value;
         const foodLabel = { pizza: 'Pizza', sandwiches: 'Sandwiches', both: 'Both' }[food];
+        const dietary = document.getElementById('rsvp-dietary').value.trim();
 
         btn.disabled = true;
         btn.textContent = 'Sending…';
@@ -570,7 +575,7 @@
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    content: `**New RSVP**\n**Name:** ${name}\n**Guests:** ${guests}\n**Food:** ${foodLabel}`
+                    content: `**New RSVP**\n**Name:** ${name}\n**Guests:** ${guests}\n**Food:** ${foodLabel}\n**Dietary/Allergies:** ${dietary || 'None'}`
                 })
             });
 
