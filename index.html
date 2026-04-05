@@ -200,6 +200,39 @@
             color: var(--dark-taupe);
         }
 
+        .attire {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background-color: var(--warm-white);
+            border-radius: 4px;
+        }
+
+        .attire-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: 1.4rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--charcoal);
+            margin-bottom: 0.5rem;
+        }
+
+        .attire-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            color: var(--soft-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .attire-detail {
+            font-size: 0.85rem;
+            color: var(--dark-taupe);
+            line-height: 1.7;
+        }
+
         .gifts {
             text-align: center;
             margin-top: 3rem;
@@ -242,6 +275,151 @@
         .gifts-link:hover {
             color: var(--dark-taupe);
             border-color: var(--dark-taupe);
+        }
+
+        .rsvp-section {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background-color: var(--warm-white);
+            border-radius: 4px;
+        }
+
+        .rsvp-heading {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-size: 1.6rem;
+            text-align: center;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--charcoal);
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-label {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 0.7rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--dark-taupe);
+            margin-bottom: 0.4rem;
+        }
+
+        .form-input,
+        .form-select {
+            width: 100%;
+            padding: 0.65rem 0.75rem;
+            background-color: var(--ivory);
+            border: 1px solid var(--taupe);
+            border-radius: 2px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: var(--charcoal);
+            outline: none;
+            transition: border-color 0.2s;
+            appearance: none;
+        }
+
+        .form-input:focus,
+        .form-select:focus {
+            border-color: var(--soft-gold);
+        }
+
+        .form-select-wrapper {
+            position: relative;
+        }
+
+        .form-select-wrapper::after {
+            content: '';
+            position: absolute;
+            right: 0.85rem;
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+            width: 6px;
+            height: 6px;
+            border-right: 1px solid var(--taupe);
+            border-bottom: 1px solid var(--taupe);
+            pointer-events: none;
+        }
+
+        .form-radio-group {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .form-radio-label {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.6rem 0.5rem;
+            background-color: var(--ivory);
+            border: 1px solid var(--taupe);
+            border-radius: 2px;
+            cursor: pointer;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05rem;
+            color: var(--charcoal);
+            transition: border-color 0.2s, background-color 0.2s;
+        }
+
+        .form-radio-label input[type="radio"] {
+            display: none;
+        }
+
+        .form-radio-label:has(input:checked) {
+            border-color: var(--soft-gold);
+            background-color: #FBF7EF;
+            color: var(--soft-gold);
+        }
+
+        .form-submit {
+            width: 100%;
+            margin-top: 0.5rem;
+            padding: 0.85rem;
+            background-color: var(--soft-gold);
+            color: var(--ivory);
+            border: none;
+            border-radius: 2px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .form-submit:hover {
+            background-color: var(--dark-taupe);
+        }
+
+        .rsvp-tab {
+            display: block;
+            position: sticky;
+            bottom: 0;
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--soft-gold);
+            color: var(--ivory);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+
+        .rsvp-tab:hover {
+            background-color: var(--dark-taupe);
         }
 
         @media (max-width: 430px) {
@@ -302,10 +480,59 @@
                 </div>
             </div>
 
+<!--            <div class="attire">-->
+<!--                <h3 class="attire-heading">Attire</h3>-->
+<!--                <p class="attire-text">Semi-formal / Cocktail</p>-->
+<!--                <p class="attire-detail">Please refrain from wearing jeans or cocktail dresses. The ceremony will be held outdoors.</p>-->
+<!--            </div>-->
+
             <div class="gifts">
                 <h3 class="gifts-heading">A Note on Gifts</h3>
                 <p class="gifts-text">Your presence is our present. I know I know, I groaned writing it too. ate with us is more than enough. If you insist on giving, we'd love for you to make a donation in our name.</p>
                 <a href="https://saveourcanyons.org/donate-soc" class="gifts-link">Save Our Canyons</a>
+            </div>
+
+            <div class="rsvp-section" id="rsvp">
+                <h2 class="rsvp-heading">RSVP</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label class="form-label" for="rsvp-name">Name</label>
+                        <input class="form-input" type="text" id="rsvp-name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="rsvp-guests">Number of Guests</label>
+                        <div class="form-select-wrapper">
+                            <select class="form-select" id="rsvp-guests" name="guests" required>
+                                <option value="" disabled selected>Select…</option>
+                                <option value="1">Just me :)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="5">6</option>
+                                <option value="5">7</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <span class="form-label">Food Preference</span>
+                        <div class="form-radio-group">
+                            <label class="form-radio-label">
+                                <input type="radio" name="food" value="pizza" required>
+                                Pizza
+                            </label>
+                            <label class="form-radio-label">
+                                <input type="radio" name="food" value="sandwiches">
+                                Sandwiches
+                            </label>
+                            <label class="form-radio-label">
+                                <input type="radio" name="food" value="both">
+                                Both
+                            </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="form-submit" id="rsvp-submit">Send RSVP</button>
+                </form>
             </div>
 
             <footer>
@@ -317,6 +544,41 @@
                 <p class="footer-text">We can't wait to celebrate with you</p>
             </footer>
         </div>
+        <a href="#rsvp" class="rsvp-tab">RSVP</a>
     </div>
+<script>
+    document.querySelector('#rsvp form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('rsvp-submit');
+        const name = document.getElementById('rsvp-name').value.trim();
+        const guests = document.getElementById('rsvp-guests').value;
+        const food = document.querySelector('input[name="food"]:checked').value;
+        const foodLabel = { pizza: 'Pizza', sandwiches: 'Sandwiches', both: 'Both' }[food];
+
+        btn.disabled = true;
+        btn.textContent = 'Sending…';
+
+        try {
+            const res = await fetch('https://discord.com/api/webhooks/1490421363159203890/WqyDzQ4Mr5tvY7iOI71_MVSs-uWEGMQd8bxiJyg4U4E6pnE0lTy7jxqWQUrDFHedQtz7', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    content: `**New RSVP**\n**Name:** ${name}\n**Guests:** ${guests}\n**Food:** ${foodLabel}`
+                })
+            });
+
+            if (res.ok || res.status === 204) {
+                btn.textContent = 'Submitted';
+                btn.style.backgroundColor = 'var(--dark-taupe)';
+            } else {
+                throw new Error('Request failed');
+            }
+        } catch {
+            btn.disabled = false;
+            btn.textContent = 'Send RSVP';
+            alert('Something went wrong. Please try again.');
+        }
+    });
+</script>
 </body>
 </html>
